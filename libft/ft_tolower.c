@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_putnbr.c                                      :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 10:49:32 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/10 12:48:49 by spliesei         ###   ########.fr       */
+/*   Created: 2017/11/11 18:35:00 by spliesei          #+#    #+#             */
+/*   Updated: 2017/11/11 18:52:54 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int main(void)
+int	ft_tolower(int c)
 {
-	ft_putnbr(-1);
-	return (0);
+if ('A' <= c && c <= 'Z')
+	return (c + 32);
+else
+	return (c);
 }

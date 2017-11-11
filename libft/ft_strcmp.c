@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_putnbr.c                                      :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 10:49:32 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/10 12:48:49 by spliesei         ###   ########.fr       */
+/*   Created: 2017/11/11 14:51:21 by spliesei          #+#    #+#             */
+/*   Updated: 2017/11/11 14:55:58 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int main(void)
+int	ft_strcmp(char *s1, char *s2)
 {
-	ft_putnbr(-1);
-	return (0);
+	int i;
+
+	i = 0;
+	while (s1[i] == s2[i])
+	{
+		if (s1[i] == '\0' && s2[i] == '\0')
+			return (0);
+		else
+			i++;
+	}
+	return (s1[i] - s2[i]);
 }

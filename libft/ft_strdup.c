@@ -1,19 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_putnbr.c                                      :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 10:49:32 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/10 12:48:49 by spliesei         ###   ########.fr       */
+/*   Created: 2017/11/11 14:48:11 by spliesei          #+#    #+#             */
+/*   Updated: 2017/11/11 14:49:12 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
-int main(void)
+size_t	ft_strlen(const char *s)
 {
-	ft_putnbr(-1);
-	return (0);
+	size_t len;
+
+	len = 0;
+	while (s[len])
+		len++;
+	return (len);
+}
+
+char	*ft_strdup(char *src)
+{
+	int		i;
+	char	*dup;
+
+	dup = (char*)malloc(sizeof(char) * ft_strlen(src));
+	i = 0;
+	while (src[i])
+	{
+		dup[i] = src[i];
+		i++;
+	}
+	dup[i] = '\0';
+	return (dup);
 }
