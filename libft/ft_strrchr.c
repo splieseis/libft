@@ -1,32 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 12:00:56 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/11 19:14:47 by spliesei         ###   ########.fr       */
+/*   Created: 2017/11/14 20:49:27 by spliesei          #+#    #+#             */
+/*   Updated: 2017/11/14 20:58:10 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stdio.h>
 
-void	*ft_memalloc(size_t size)
+char	*ft_strrchr(const char *s, int c)
 {
-	void *ret;
-	unsigned char *c;
-	unsigned int i;
+	int i;
 
-	ret = (void *)malloc(size);
-	if (!ret)
-		return (NULL);
-	c = ret;
 	i = 0;
-	while (i < size)
-	{
-		c[i] = 0;
+	while (s[i])
 		i++;
-	}
-	return (ret);
+	if (s[i + 1] == c)
+		return ((char *)&s[i]);
+	while (s[i] != c && i >= 0)
+		i--;
+	if (s[i] == c)
+		return ((char *)&s[i]);
+	else
+		return (NULL);
 }
+
+/*int main (void)
+{
+	char *s = "Hallo I'm a working function.";
+	printf("%s\n", ft_strrchr(s, 'l'));
+	printf("%s\n", strrchr(s, 'l'));
+	return (0);
+}*/

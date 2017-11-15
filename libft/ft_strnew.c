@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 12:00:56 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/11 19:14:47 by spliesei         ###   ########.fr       */
+/*   Created: 2017/11/14 11:14:31 by spliesei          #+#    #+#             */
+/*   Updated: 2017/11/14 13:09:19 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+char	*ft_strnew(size_t size)
 {
-	void *ret;
-	unsigned char *c;
-	unsigned int i;
+	char *ret;
+	int i;
 
-	ret = (void *)malloc(size);
+	ret = (char *)malloc(sizeof(char) * (size + 1));
 	if (!ret)
 		return (NULL);
-	c = ret;
 	i = 0;
 	while (i < size)
-	{
-		c[i] = 0;
-		i++;
-	}
+		ret[i++] = 0;
+	ret[size] = '\0';
 	return (ret);
 }

@@ -1,32 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 12:00:56 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/11 19:14:47 by spliesei         ###   ########.fr       */
+/*   Created: 2017/11/15 14:18:40 by spliesei          #+#    #+#             */
+/*   Updated: 2017/11/15 14:47:26 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
 {
-	void *ret;
-	unsigned char *c;
-	unsigned int i;
+	int i;
+	int j;
 
-	ret = (void *)malloc(size);
-	if (!ret)
-		return (NULL);
-	c = ret;
 	i = 0;
-	while (i < size)
-	{
-		c[i] = 0;
+	while (s1[i])
 		i++;
+	j = 0;
+	while (s2[j] && j < n)
+	{
+		s1[i] = s2[j];
+		i++;
+		j++;
 	}
-	return (ret);
+	return (s1);
 }
+
+/*int main (void)
+{
+	char s[20] = "Hallo";
+	char d[] = "-Wien";
+	printf("mine: %s\n", ft_strncat(s, d, 4));
+	printf("real: %s\n", strncat(s, d, 4));
+	return (0);
+}*/

@@ -1,32 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   test_ft_strsub.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 12:00:56 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/11 19:14:47 by spliesei         ###   ########.fr       */
+/*   Created: 2017/11/13 16:59:38 by spliesei          #+#    #+#             */
+/*   Updated: 2017/11/14 13:09:19 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+void	ft_putstr1(char const *s)
 {
-	void *ret;
-	unsigned char *c;
-	unsigned int i;
+	int i;
 
-	ret = (void *)malloc(size);
+	i = 0;
+	while (s[i])
+		write(1, &s[i++], 1);
+}
+
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
+{
+	char *ret;
+	int i;
+
+	ret = (char *)malloc(sizeof(char) * (len + 1));
 	if (!ret)
 		return (NULL);
-	c = ret;
+	ret[len] = '\0';
 	i = 0;
-	while (i < size)
+	while (len > 0)
 	{
-		c[i] = 0;
-		i++;
+		ret [i++] = s[start];
+		start++;
+		len--;
 	}
 	return (ret);
+}
+
+int main(void)
+{
+	char *s1 = "Hallo, this is a test string";
+	ft_putstr1(ft_strsub(s1, 0, 9));
+	return (0);
 }

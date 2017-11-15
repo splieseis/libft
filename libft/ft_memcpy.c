@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 12:00:56 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/11 19:14:47 by spliesei         ###   ########.fr       */
+/*   Created: 2017/11/15 16:08:57 by spliesei          #+#    #+#             */
+/*   Updated: 2017/11/15 16:11:31 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memalloc(size_t size)
+void	*memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	void *ret;
-	unsigned char *c;
-	unsigned int i;
 
-	ret = (void *)malloc(size);
-	if (!ret)
-		return (NULL);
-	c = ret;
-	i = 0;
-	while (i < size)
-	{
-		c[i] = 0;
-		i++;
-	}
-	return (ret);
+}
+int main(void)
+{
+	char a[] = "1111";
+	char b[] = "0000";
+	printf("%s\n", (char *)ft_memcpy(b, a, 2));
+	return (0);
 }

@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 12:00:56 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/11 19:14:47 by spliesei         ###   ########.fr       */
+/*   Created: 2017/11/15 15:49:23 by spliesei          #+#    #+#             */
+/*   Updated: 2017/11/15 15:55:09 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+void	ft_bzero(void *s, size_t n)
 {
-	void *ret;
-	unsigned char *c;
-	unsigned int i;
+	unsigned char *alias;
+	int i;
 
-	ret = (void *)malloc(size);
-	if (!ret)
-		return (NULL);
-	c = ret;
+	alias = s;
 	i = 0;
-	while (i < size)
-	{
-		c[i] = 0;
-		i++;
-	}
-	return (ret);
+	while (i < n)
+		alias[i++] = 0;
 }
+
+/*int main(void)
+{
+	char b[] = "asdf";
+	ft_bzero(b, 3);
+	printf("%s\n", b);
+	return (0);
+}*/

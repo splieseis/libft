@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 12:00:56 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/11 19:14:47 by spliesei         ###   ########.fr       */
+/*   Created: 2017/11/15 10:41:05 by spliesei          #+#    #+#             */
+/*   Updated: 2017/11/15 13:34:09 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+char	*ft_strcpy(char *dst, const char *src)
 {
-	void *ret;
-	unsigned char *c;
-	unsigned int i;
+	int i;
 
-	ret = (void *)malloc(size);
-	if (!ret)
-		return (NULL);
-	c = ret;
 	i = 0;
-	while (i < size)
+	while (src[i])
 	{
-		c[i] = 0;
+		dst[i] = src[i];
 		i++;
 	}
-	return (ret);
+	dst[i] = '\0';
+	return (dst);
 }
+
+/*int main (void)
+{
+	const char s[] = "Hallo";
+	char d[] = "adasdfasd";
+	printf("mine: %s\n", ft_strcpy(d, s));
+	printf("real: %s\n", strcpy(d, s));
+	return (0);
+}*/
