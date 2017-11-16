@@ -6,7 +6,7 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 12:00:56 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/11 19:14:47 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/11/16 16:37:47 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	*ft_memalloc(size_t size)
 {
-	void *ret;
-	unsigned char *c;
-	unsigned int i;
+	void			*ret;
+	unsigned char	*c;
+	unsigned int	i;
 
 	ret = (void *)malloc(size);
 	if (!ret)
 		return (NULL);
-	c = ret;
+	c = (unsigned char *)ret;
 	i = 0;
 	while (i < size)
 	{

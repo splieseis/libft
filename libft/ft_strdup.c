@@ -6,21 +6,11 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 14:48:11 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/11 14:49:12 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/11/16 16:57:28 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s)
-{
-	size_t len;
-
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
-}
+#include "libft.h"
 
 char	*ft_strdup(char *src)
 {

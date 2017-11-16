@@ -6,7 +6,7 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 18:35:00 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/11 18:52:54 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/11/16 17:12:01 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_tolower(int c)
 {
-if ('A' <= c && c <= 'Z')
-	return (c + 32);
-else
-	return (c);
+	if ('A' <= c && c <= 'Z')
+		return (c + 32);
+	else
+		return (c);
 }

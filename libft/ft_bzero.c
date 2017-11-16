@@ -6,7 +6,7 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 15:49:23 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/15 15:55:09 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/11/16 17:35:47 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *alias;
-	int i;
+	unsigned char	*alias;
+	size_t			i;
 
 	alias = s;
 	i = 0;
@@ -23,10 +23,12 @@ void	ft_bzero(void *s, size_t n)
 		alias[i++] = 0;
 }
 
-/*int main(void)
-{
-	char b[] = "asdf";
-	ft_bzero(b, 3);
-	printf("%s\n", b);
-	return (0);
-}*/
+/*
+** int main(void)
+** {
+**	char b[] = "asdf";
+**	ft_bzero(b, 3);
+**	printf("%s\n", b);
+**	return (0);
+** }
+*/

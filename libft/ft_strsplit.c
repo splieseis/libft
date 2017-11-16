@@ -6,20 +6,11 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 18:07:42 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/14 13:07:54 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/11/16 17:07:41 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_putstr1(char *s)
-{
-	int i;
-
-	i = 0;
-	while (s[i])
-		write(1, &s[i++], 1);
-}
 
 void ft_printarr(char **arr)
 {
@@ -28,7 +19,7 @@ void ft_printarr(char **arr)
 	i = 0;
 	while (arr[i])
 	{
-		ft_putstr1(arr[i]);
+		ft_putstr(arr[i]);
 		i++;
 	}
 }

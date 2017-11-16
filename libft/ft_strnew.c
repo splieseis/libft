@@ -6,7 +6,7 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 11:14:31 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/14 13:09:19 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/11/16 17:39:48 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnew(size_t size)
 {
-	char *ret;
-	int i;
+	char	*ret;
+	size_t	i;
 
 	ret = (char *)malloc(sizeof(char) * (size + 1));
 	if (!ret)

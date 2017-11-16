@@ -6,7 +6,7 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 15:50:55 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/10 17:04:24 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/11/16 17:39:28 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	int i;
+	size_t	i;
 
 	i = 0;
 	while (i < n && s1[i] && s2[i])

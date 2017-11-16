@@ -6,12 +6,11 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 20:49:27 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/14 20:58:10 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/11/16 17:06:43 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -30,10 +29,12 @@ char	*ft_strrchr(const char *s, int c)
 		return (NULL);
 }
 
-/*int main (void)
-{
-	char *s = "Hallo I'm a working function.";
-	printf("%s\n", ft_strrchr(s, 'l'));
-	printf("%s\n", strrchr(s, 'l'));
-	return (0);
-}*/
+/*
+** int main (void)
+** {
+** char *s = "Hallo I'm a working function.";
+** printf("%s\n", ft_strrchr(s, 'l'));
+** printf("%s\n", strrchr(s, 'l'));
+** return (0);
+** }
+*/

@@ -1,42 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/15 14:38:38 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/16 17:38:37 by spliesei         ###   ########.fr       */
+/*   Created: 2017/11/15 16:33:38 by spliesei          #+#    #+#             */
+/*   Updated: 2017/11/16 17:36:57 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int		i;
-	size_t	j;
+	unsigned char	*a_dst;
+	unsigned char	*a_src;
+	size_t			i;
+	char			tmp[sizeof(src)];
 
+	a_dst = (unsigned char *)dst;
+	a_src = (unsigned char *)src;
 	i = 0;
-	while (dst[i])
-		i++;
-	j = 0;
-	while (src[j] && j < size)
+	while (i < len)
 	{
-		dst[i] = src[j];
+		tmp[i] = a_src[i];
 		i++;
-		j++;
 	}
-	printf("test:%s\n", dst);
-	return (sizeof(dst) - 1);
+	i = 0;
+	while (i < len)
+	{
+		a_dst[i] = tmp[i];
+		i++;
+	}
+	return (dst);
 }
 
 /*
 ** int main(void)
 ** {
-** char d[20] = "Hallo";
-** char s[] = "-W";
-** printf("mine:%lu\n", ft_strlcat(d, s, 5));
-** printf("real:%lu\n", strlcat(d, s, 5));
+**	char a[] = "1234";
+**	//char b[] = "0000";
+**	printf("%s\n", (char *)ft_memmove(&a[0], &a[1], 2));
+**	return (0);
 ** }
 */

@@ -6,15 +6,15 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 09:56:43 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/15 10:14:19 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/11/16 17:41:09 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_needle(const char *s1, const char *s2, size_t len)
+int		ft_needle(const char *s1, const char *s2, size_t len)
 {
-	int i;
+	size_t	i;
 
 	i = 0;
 	while (s1[i] == s2[i] && s1[i] && s2[i] && i < len)
@@ -26,7 +26,7 @@ int	ft_needle(const char *s1, const char *s2, size_t len)
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int size;
+	size_t size;
 	int i;
 
 	size = ft_strlen(needle);
@@ -47,11 +47,13 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (NULL);
 }
 
-/*int main (void)
-{
-	char *haystack = "Hallo I'm a working function.";
-	char *needle = "allo";
-	printf("%s\n", ft_strnstr(haystack, needle, 5));
-	printf("%s\n", strnstr(haystack, needle, 5));
-	return (0);
-}*/
+/*
+** int main (void)
+** {
+** char *haystack = "Hallo I'm a working function.";
+** char *needle = "allo";
+** printf("%s\n", ft_strnstr(haystack, needle, 5));
+** printf("%s\n", strnstr(haystack, needle, 5));
+** return (0);
+** }
+*/

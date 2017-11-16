@@ -6,16 +6,11 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 11:10:27 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/10 11:35:58 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/11/16 16:52:27 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static void ft_print_digits_fd(char c, int fd)
-{
-	write(fd, &c, 1);
-}
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -31,9 +26,9 @@ void	ft_putnbr_fd(int n, int fd)
 		if (n >= 10)
 		{
 			ft_putnbr_fd(n / 10, fd);
-			ft_print_digits_fd(n % 10 + '0', fd);
+			ft_putchar_fd(n % 10 + '0', fd);
 		}
 		else
-			ft_print_digits_fd(n + '0', fd);
+			ft_putchar_fd(n + '0', fd);
 	}
 }

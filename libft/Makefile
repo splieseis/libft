@@ -6,7 +6,7 @@
 #    By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 10:30:07 by spliesei          #+#    #+#              #
-#    Updated: 2017/11/10 10:32:18 by spliesei         ###   ########.fr        #
+#    Updated: 2017/11/16 17:27:05 by spliesei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,11 +16,11 @@ SRC = ft_*.c *.h
 
 CFLAGS = -Wall -Wextra -Werror
 
-all: $(NAME)
-
 $(NAME):
 	gcc $(CFLAGS) -c $(SRC)
 	ar rc $(NAME) ft_*.o
+
+all: $(NAME)
 
 clean:
 	rm -f ft_*.o
@@ -28,4 +28,5 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-re: fclean all
+re: fclean
+	make

@@ -6,13 +6,13 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 13:47:52 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/15 14:18:29 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/11/16 16:53:53 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *restrict s1, const char *restrict s2)
+char	*ft_strcat(char *s1, const char *s2)
 {
 	int i;
 	int j;
@@ -30,11 +30,13 @@ char	*ft_strcat(char *restrict s1, const char *restrict s2)
 	return (s1);
 }
 
-/*int main (void)
-{
-	char s[20] = "Hallo";
-	char d[] = "-Wien";
-	printf("real: %s\n", strcat(s, d));
-	printf("mine: %s\n", ft_strcat(s, d));
-	return (0);
-}*/
+/*
+** int main (void)
+** {
+**	char s[20] = "Hallo";
+**	char d[] = "-Wien";
+**	printf("real: %s\n", strcat(s, d));
+**	printf("mine: %s\n", ft_strcat(s, d));
+**	return (0);
+** }
+*/

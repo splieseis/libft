@@ -6,7 +6,7 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 10:41:05 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/15 13:34:09 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/11/16 16:55:50 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,13 @@ char	*ft_strcpy(char *dst, const char *src)
 	return (dst);
 }
 
-/*int main (void)
-{
-	const char s[] = "Hallo";
-	char d[] = "adasdfasd";
-	printf("mine: %s\n", ft_strcpy(d, s));
-	printf("real: %s\n", strcpy(d, s));
-	return (0);
-}*/
+/*
+** int main (void)
+** {
+** const char s[] = "Hallo";
+** char d[] = "adasdfasd";
+** printf("mine: %s\n", ft_strcpy(d, s));
+** printf("real: %s\n", strcpy(d, s));
+** return (0);
+** }
+*/

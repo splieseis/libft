@@ -6,13 +6,15 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 18:17:44 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/11 18:25:34 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/11/16 16:32:22 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//????not sure????
+/*
+** ????not sure????
+*/
 
 int	ft_isascii(int c)
 {

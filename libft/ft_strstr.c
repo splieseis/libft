@@ -6,13 +6,13 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 21:15:46 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/15 09:56:13 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/11/16 17:08:16 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_needle(const char *s1, const char *s2)
+int		ft_needle(const char *s1, const char *s2)
 {
 	int i;
 
@@ -45,11 +45,13 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	return (NULL);
 }
 
-/*int main (void)
-{
-	char *haystack = "Hallo I'm a working function.";
-	char *needle = "I'm a working function.";
-	printf("%s\n", ft_strstr(haystack, needle));
-	printf("%s\n", strstr(haystack, needle));
-	return (0);
-}*/
+/*
+** int main (void)
+** {
+** char *haystack = "Hallo I'm a working function.";
+** char *needle = "I'm a working function.";
+** printf("%s\n", ft_strstr(haystack, needle));
+** printf("%s\n", strstr(haystack, needle));
+** return (0);
+** }
+*/

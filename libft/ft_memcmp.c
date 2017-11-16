@@ -1,42 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/15 14:38:38 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/16 17:38:37 by spliesei         ###   ########.fr       */
+/*   Created: 2017/11/16 14:34:47 by spliesei          #+#    #+#             */
+/*   Updated: 2017/11/16 17:36:25 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int		i;
-	size_t	j;
+	unsigned char	*a_s1;
+	unsigned char	*a_s2;
+	size_t			i;
 
+	a_s1 = (unsigned char *)s1;
+	a_s2 = (unsigned char *)s2;
 	i = 0;
-	while (dst[i])
+	while (a_s1[i] == a_s2[i] && i < n)
 		i++;
-	j = 0;
-	while (src[j] && j < size)
-	{
-		dst[i] = src[j];
-		i++;
-		j++;
-	}
-	printf("test:%s\n", dst);
-	return (sizeof(dst) - 1);
+	if (!a_s1[i])
+		return (0);
+	return (a_s1[i] - a_s2[i]);
 }
 
 /*
 ** int main(void)
 ** {
-** char d[20] = "Hallo";
-** char s[] = "-W";
-** printf("mine:%lu\n", ft_strlcat(d, s, 5));
-** printf("real:%lu\n", strlcat(d, s, 5));
+**	char a[] = "1234_";
+**	char b[] = "12345";
+**	printf("mine: %d\n", ft_memcmp(a, b, 5));
+**	printf("real: %d\n", memcmp(a, b, 5));
+**	return (0);
 ** }
 */

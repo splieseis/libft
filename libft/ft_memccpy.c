@@ -1,42 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/15 14:38:38 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/16 17:38:37 by spliesei         ###   ########.fr       */
+/*   Created: 2017/11/15 17:02:22 by spliesei          #+#    #+#             */
+/*   Updated: 2017/11/16 16:39:17 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	int		i;
-	size_t	j;
+	unsigned char	*a_dst;
+	unsigned char	*a_src;
+	int				i;
 
+	a_dst = (unsigned char *)dst;
+	a_src = (unsigned char *)src;
 	i = 0;
-	while (dst[i])
-		i++;
-	j = 0;
-	while (src[j] && j < size)
+	while (i < n && (int)src[i] != c)
 	{
-		dst[i] = src[j];
+		a_dst[i] = a_src[i];
 		i++;
-		j++;
 	}
-	printf("test:%s\n", dst);
-	return (sizeof(dst) - 1);
+	return (dst);
 }
-
 /*
 ** int main(void)
 ** {
-** char d[20] = "Hallo";
-** char s[] = "-W";
-** printf("mine:%lu\n", ft_strlcat(d, s, 5));
-** printf("real:%lu\n", strlcat(d, s, 5));
+**	char a[] = "1121";
+**	char b[] = "0000";
+**	printf("%s\n", (char *)ft_memccpy(b, a, '2', 4));
+**	return (0);
 ** }
 */

@@ -6,16 +6,16 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 14:18:40 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/15 14:47:26 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/11/16 17:38:55 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	int i;
-	int j;
+	int		i;
+	size_t	j;
 
 	i = 0;
 	while (s1[i])
@@ -30,11 +30,13 @@ char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
 	return (s1);
 }
 
-/*int main (void)
-{
-	char s[20] = "Hallo";
-	char d[] = "-Wien";
-	printf("mine: %s\n", ft_strncat(s, d, 4));
-	printf("real: %s\n", strncat(s, d, 4));
-	return (0);
-}*/
+/*
+** int main (void)
+** {
+**	char s[20] = "Hallo";
+**	char d[] = "-Wien";
+**	printf("mine: %s\n", ft_strncat(s, d, 4));
+**	printf("real: %s\n", strncat(s, d, 4));
+**	return (0);
+** }
+*/
