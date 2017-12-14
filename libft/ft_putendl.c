@@ -6,7 +6,7 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 11:01:40 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/10 11:20:13 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/12/13 11:15:00 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@ void	ft_putendl(char const *s)
 	int i;
 
 	i = 0;
-	while (s[i])
-		write(1, s[i++], 1);
-	write(1, '\n', 1);
+	if (s)
+	{
+		while (s[i])
+			write(1, &s[i++], 1);
+		write(1, "\n", 1);
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 20:15:10 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/16 16:54:34 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/12/13 11:53:09 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,7 @@ char	*ft_strchr(const char *s, int c)
 	if (s[i] == c)
 		return ((char *)&s[i]);
 	else
-	{
-		if (s[i + 1] == c)
-			return ((char *)&s[i]);
-		else
-			return (NULL);
-	}
+		return (NULL);
 }
 /*
 ** int main (void)

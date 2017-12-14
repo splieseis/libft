@@ -6,7 +6,7 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 14:18:40 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/16 17:38:55 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/12/13 15:23:38 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ char	*ft_strncat(char *s1, const char *s2, size_t n)
 		i++;
 		j++;
 	}
+	s1[i] = '\0';
 	return (s1);
 }
 

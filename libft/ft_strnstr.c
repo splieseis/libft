@@ -6,13 +6,13 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 09:56:43 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/16 17:41:09 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/12/13 16:10:56 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_needle(const char *s1, const char *s2, size_t len)
+int	static	ft_needle(const char *s1, const char *s2, size_t len)
 {
 	size_t	i;
 
@@ -24,14 +24,10 @@ int		ft_needle(const char *s1, const char *s2, size_t len)
 	return (0);
 }
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char		*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t size;
 	int i;
 
-	size = ft_strlen(needle);
-	if (size > len)
-		return (NULL);
 	if (needle[0] == '\0')
 		return ((char *)&haystack[0]);
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 16:59:38 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/16 17:09:17 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/12/13 11:29:51 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	char	*ret;
 	int		i;
 
+	if (!s)
+		return (NULL);
 	ret = (char *)malloc(sizeof(char) * (len + 1));
 	if (!ret)
 		return (NULL);

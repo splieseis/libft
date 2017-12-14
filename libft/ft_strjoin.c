@@ -6,7 +6,7 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 17:01:08 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/16 16:59:34 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/12/13 19:35:36 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*ret;
 	int		i;
 
-	lenght = (ft_strlen(s1) + ft_strlen(s1));
+	if (!s1 || !s2)
+		return (NULL);
+	lenght = (ft_strlen(s1) + ft_strlen(s2));
 	ret = (char *)malloc(sizeof(char) * (lenght + 1));
 	if (!ret)
 		return (NULL);

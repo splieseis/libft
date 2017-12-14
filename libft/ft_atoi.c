@@ -6,7 +6,7 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 17:07:32 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/16 16:25:32 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/12/13 19:20:55 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ static int	ft_sign(char c)
 
 static int	ft_iswhite(char c)
 {
-	if (c == ' ' || c == '\t' || c == '\n')
+	if (c == ' ' || c == '\t' || c == '\n' ||
+		c == '\v' || c == '\f' || c == '\r')
 		return (1);
 	return (0);
 }
@@ -29,24 +30,28 @@ static int	ft_iswhite(char c)
 int			ft_atoi(const char *str)
 {
 	int i;
-	int res;
 	int sign;
+	long res;
+	long tmp;
 
 	i = 0;
 	while (ft_iswhite(str[i]))
 		i++;
-	res = 0;
 	sign = 1;
 	if (ft_sign(str[i]))
 	{
-		if (str[i] == '-')
+		if (str[i++] == '-')
 			sign *= -1;
-		i++;
 	}
+	res = 0;
 	while (ft_isdigit(str[i]))
 	{
-		res = res * 10 + (str[i] - '0') * sign;
-		i++;
+		tmp = res;
+		res = res * 10 + (str[i++] - '0') * sign;
+		if (tmp > res && sign == 1)
+			return (-1);
+		if (tmp < res && sign == -1)
+			return (0);
 	}
 	return (res);
 }

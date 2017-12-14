@@ -6,7 +6,7 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 16:33:38 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/16 17:36:57 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/12/13 20:41:42 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,18 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char	*a_dst;
 	unsigned char	*a_src;
-	size_t			i;
-	char			tmp[sizeof(src)];
 
 	a_dst = (unsigned char *)dst;
 	a_src = (unsigned char *)src;
-	i = 0;
-	while (i < len)
+	if (a_dst < a_src)
+		ft_memcpy(a_dst, a_src, len);
+	else
 	{
-		tmp[i] = a_src[i];
-		i++;
-	}
-	i = 0;
-	while (i < len)
-	{
-		a_dst[i] = tmp[i];
-		i++;
+		while (len > 0)
+		{
+			len--;
+			a_dst[len] = a_src[len];
+		}
 	}
 	return (dst);
 }

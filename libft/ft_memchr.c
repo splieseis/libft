@@ -6,7 +6,7 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 14:11:46 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/16 17:36:03 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/12/13 16:07:02 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	alias = (unsigned char *)s;
 	i = 0;
-	while (alias[i] && i < n)
+	while (i < n)
 	{
-		if (alias[i] == c)
-			return (&s[i]);
+		if (alias[i] == (unsigned char)c)
+			return ((void *)&s[i]);
 		i++;
 	}
 	return (NULL);

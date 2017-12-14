@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 15:33:09 by spliesei          #+#    #+#             */
-/*   Updated: 2017/12/13 14:02:38 by spliesei         ###   ########.fr       */
+/*   Created: 2017/12/12 10:38:51 by spliesei          #+#    #+#             */
+/*   Updated: 2017/12/14 12:00:09 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_strdel(char **as)
 {
-	unsigned int i;
-
-	i = 0;
-	if (s)
+	if (*as != NULL)
 	{
-		while (s[i])
-		{
-			(*f)(i, &s[i]);
-			i++;
-		}
+		free(*as);
+		*as = NULL;
 	}
 }

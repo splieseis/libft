@@ -6,7 +6,7 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 14:40:40 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/10 15:19:52 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/12/14 12:02:23 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 void	ft_memdel(void **ap)
 {
-	void *a;
-
-	free(*ap);
+	if (*ap != NULL)
+	{
+		free(*ap);
+		*ap = NULL;
+	}
 }

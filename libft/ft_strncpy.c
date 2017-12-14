@@ -6,7 +6,7 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 13:36:14 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/16 17:03:22 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/12/13 19:57:31 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
 	size_t i;
-	size_t size;
 
 	i = 0;
 	while (src[i] && i < len)
@@ -23,8 +22,7 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 		dst[i] = src[i];
 		i++;
 	}
-	size = sizeof(dst);
-	while (i < size)
+	while (i < len)
 		dst[i++] = '\0';
 	return (dst);
 }

@@ -6,7 +6,7 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 10:29:57 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/16 17:12:54 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/12/14 11:57:54 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	**ft_strsplit(char const *s, char c);
 char	*ft_strnew(size_t size);
+void	ft_strdel(char **as);
 void	ft_strclr(char *s);
 char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));

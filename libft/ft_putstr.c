@@ -6,7 +6,7 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 10:29:47 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/13 19:41:37 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/12/13 11:12:49 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@ void	ft_putstr(char const *s)
 	int i;
 
 	i = 0;
-	while (s[i])
-		write(1, &s[i++], 1);
+	if (s)
+	{
+		while (s[i])
+			write(1, &s[i++], 1);
+	}
 }

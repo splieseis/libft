@@ -6,7 +6,7 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 14:34:47 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/16 17:36:25 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/12/13 19:53:19 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	a_s1 = (unsigned char *)s1;
 	a_s2 = (unsigned char *)s2;
 	i = 0;
-	while (a_s1[i] == a_s2[i] && i < n)
+	while (i < n && a_s1[i] == a_s2[i])
 		i++;
-	if (!a_s1[i])
-		return (0);
-	return (a_s1[i] - a_s2[i]);
+	if (i < n)
+		return (a_s1[i] - a_s2[i]);
+	return (0);
 }
 
 /*

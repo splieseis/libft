@@ -6,7 +6,7 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 15:13:09 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/10 15:30:41 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/12/13 14:02:00 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,12 @@ void	ft_striter(char *s, void (*f)(char *))
 	int i;
 
 	i = 0;
-	while (s[i])
+	if (s)
 	{
-		(*f)(s[i]);
-		i++;
+		while (s[i])
+		{
+			(*f)(&s[i]);
+			i++;
+		}
 	}
 }

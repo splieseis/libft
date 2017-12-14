@@ -6,7 +6,7 @@
 /*   By: spliesei <spliesei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 20:49:27 by spliesei          #+#    #+#             */
-/*   Updated: 2017/11/16 17:06:43 by spliesei         ###   ########.fr       */
+/*   Updated: 2017/12/13 11:54:34 by spliesei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char	*ft_strrchr(const char *s, int c)
 	i = 0;
 	while (s[i])
 		i++;
-	if (s[i + 1] == c)
-		return ((char *)&s[i]);
 	while (s[i] != c && i >= 0)
 		i--;
 	if (s[i] == c)
